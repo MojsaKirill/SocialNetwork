@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <tx:annotation-driven/>
+    <context:annotation-config/>
+    <!-- Database Information -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/social_network"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
+
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.senla.beans"/>
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <bean id="messageDAO" class="com.senla.dao.MessageDAOImpl"/>
+    <bean id="userDAO" class="com.senla.dao.UserDAOImpl"/>
+    <bean id="publicMessageDAO" class="com.senla.dao.PublicMessageDAOImpl"/>
+    <bean id="messageService" class="com.senla.services.MessageServiceImpl"/>
+    <bean id="userService" class="com.senla.services.UserServiceImpl"/>
+    <bean id="publicMessageService" class="com.senla.services.PublicMessageServiceImpl"/>
+    <bean id="beanUtils" class="org.apache.commons.beanutils.PropertyUtilsBean"/>
+    <bean id="forumService" class="com.senla.services.ForumServiceImpl"/>
+    <bean id="forumDAO" class="com.senla.dao.ForumDAOImpl"/>
+    <bean id="modelMapper" class="org.modelmapper.ModelMapper" scope="prototype"/>
+    <bean id="eventDAO" class="com.senla.dao.EventDAOImpl"/>
+    <bean id="eventService" class="com.senla.services.EventServiceImpl"/>
+    <bean id="forumMessageService" class="com.senla.services.ForumMessageServiceImpl"/>
+    <bean id="forumMessageDAO" class="com.senla.dao.ForumMessageDAOImpl"/>
+    <bean id="roleDAO" class="com.senla.dao.RoleDAOImpl"/>
+</beans>

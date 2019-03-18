@@ -1,0 +1,149 @@
+-Register
+{
+    "login": "login",
+    "password": "1234",
+    "email": "kirill@mail.ru",
+    "userInfo": {
+        "birthday": 1543266000000,
+        "school": "school №1",
+        "highSchool": "GRSU",
+        "aboutUser": "none",
+        "skype": "m.kirill08",
+        "phone": "+375336894803",
+        "firstName": "Krill",
+        "lastName": "Moysa"
+    },
+    "userAddress": {
+        "city": "Grodno",
+        "country": "Belarus",
+        "home": "19"
+    }
+}
+-User
+{
+    "id": 1,
+    "email": "kirill@mail.ru",
+    "userInfo": {
+        "birthday": 1543266000000,
+        "school": "school №1",
+        "highSchool": "GRSU",
+        "aboutUser": "none",
+        "skype": "m.kirill08",
+        "phone": "+375336894803",
+        "firstName": "Krill",
+        "lastName": "Moysa"
+    },
+    "userAddress": {
+        "city": "Grodno",
+        "country": "Belarus",
+        "home": "19"
+    }
+}
+-SearchDTO
+{
+	"firstName" : "Kirill",
+	"lastName" : "Moysa"
+}
+-Event
+{
+    "id": 1,
+    "name": "Event",
+    "aboutEvent": "About",
+    "dateEvent": 1544648400000,
+    "moderator": {
+        "id": 1,
+        "email": "kirill@mail.ru",
+        "userInfo": {
+            "birthday": 1543266000000,
+            "school": "school №1",
+            "highSchool": "GRSU",
+            "aboutUser": "none",
+            "skype": "m.kirill08",
+            "phone": "+375336894803",
+            "firstName": "Krill",
+            "lastName": "Moysa"
+        },
+        "userAddress": {
+            "city": "Grodno",
+            "country": "Belarus",
+            "home": "19"
+        }
+    }
+}
+-Forum
+{
+    "id": 1,
+    "name": "Forum",
+    "topic": "Topic",
+    "moderator": {
+        "id": 1,
+        "email": "kirill@mail.ru",
+        "userInfo": {
+            "birthday": 1543266000000,
+            "school": "school №1",
+            "highSchool": "GRSU",
+            "aboutUser": "none",
+            "skype": "m.kirill08",
+            "phone": "+375336894803",
+            "firstName": "Krill",
+            "lastName": "Moysa"
+        },
+        "userAddress": {
+            "city": "Grodno",
+            "country": "Belarus",
+            "home": "19"
+        }
+    }
+}
+-ForumMessage
+{
+        "id": 1,
+        "message": "Message",
+        "date": 1544648400000,
+        "recipient": {
+            "id": 1,
+            "email": "kirill@mail.ru",
+            "userInfo": {
+                "birthday": 1543266000000,
+                "school": "school №1",
+                "highSchool": "GRSU",
+                "aboutUser": "none",
+                "skype": "m.kirill08",
+                "phone": "+375336894803",
+                "firstName": "Krill",
+                "lastName": "Moysa"
+            },
+            "userAddress": {
+                "city": "Grodno",
+                "country": "Belarus",
+                "home": "19"
+            }
+        }
+}
+-Message
+
+-PublicMessage
+{
+        "id": 1,
+        "message": "Message",
+        "recipient": {
+            "id": 1,
+            "email": "kirill@mail.ru",
+            "userInfo": {
+                "birthday": 1543266000000,
+                "school": "school №1",
+                "highSchool": "GRSU",
+                "aboutUser": "none",
+                "skype": "m.kirill08",
+                "phone": "+375336894803",
+                "firstName": "Krill",
+                "lastName": "Moysa"
+            },
+            "userAddress": {
+                "city": "Grodno",
+                "country": "Belarus",
+                "home": "19"
+            }
+        },
+        "date": 1544648400000
+}
